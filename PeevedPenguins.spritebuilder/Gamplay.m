@@ -84,6 +84,7 @@
     if (_mouseJoint != nil)
     {
         // releases the joint and lets the catapult snap back
+        [self launchPenguin];
         [_mouseJoint invalidate];
         _mouseJoint = nil;
     }
