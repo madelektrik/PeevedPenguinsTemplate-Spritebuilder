@@ -9,8 +9,10 @@
 #import "Gamplay.h"
 
 @implementation Gamplay
+{
     CCPhysicsNode *_physicsNode;
     CCNode *_catapultArm;
+}
 
 // is called when CCB file has completed loading
 - (void)didLoadFromCCB {
