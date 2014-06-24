@@ -29,6 +29,8 @@
     _physicsNode.debugDraw = TRUE;
     CCScene *level = [CCBReader loadAsScene:@"Levels/Level1"];
     [_levelNode addChild:level];
+    _mouseJoint = [CCPhysicsJoint init];
+    _mouseJointNode = [CCNode init];
 }
 
 - (void)launchPenguin {
