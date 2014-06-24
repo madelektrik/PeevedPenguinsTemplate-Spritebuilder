@@ -24,13 +24,13 @@
 - (void)didLoadFromCCB {
     // tell this scene to accept touches
     self.userInteractionEnabled = TRUE;
+    _mouseJoint = [CCPhysicsJoint init];
     _pullbackNode.physicsBody.collisionMask = @[];
     _mouseJointNode.physicsBody.collisionMask = @[];
     _physicsNode.debugDraw = TRUE;
     CCScene *level = [CCBReader loadAsScene:@"Levels/Level1"];
     [_levelNode addChild:level];
-    _mouseJoint = [CCPhysicsJoint init];
-    _mouseJointNode = [CCNode init];
+
 }
 
 - (void)launchPenguin {
