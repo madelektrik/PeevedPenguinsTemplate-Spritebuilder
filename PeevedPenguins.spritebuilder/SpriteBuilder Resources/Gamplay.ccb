@@ -164,8 +164,8 @@
 					<string>Position</string>
 					<key>value</key>
 					<array>
-						<real>282.1622314453125</real>
-						<real>301.47354125976562</real>
+						<real>231.04107666015625</real>
+						<real>322.05477905273438</real>
 						<integer>0</integer>
 						<integer>0</integer>
 						<integer>0</integer>
@@ -1004,7 +1004,7 @@
 									<key>allowsRotation</key>
 									<true/>
 									<key>bodyShape</key>
-									<integer>0</integer>
+									<integer>1</integer>
 									<key>collisionCategories</key>
 									<array/>
 									<key>collisionMask</key>
@@ -1012,7 +1012,7 @@
 									<key>collisionType</key>
 									<string></string>
 									<key>cornerRadius</key>
-									<real>0.0</real>
+									<real>16</real>
 									<key>density</key>
 									<real>1</real>
 									<key>dynamic</key>
@@ -1027,40 +1027,9 @@
 											<real>0.0</real>
 											<real>0.0</real>
 										</array>
-										<array>
-											<real>0.0</real>
-											<real>32</real>
-										</array>
-										<array>
-											<real>32</real>
-											<real>32</real>
-										</array>
-										<array>
-											<real>32</real>
-											<real>0.0</real>
-										</array>
 									</array>
 									<key>polygons</key>
-									<array>
-										<array>
-											<array>
-												<real>32</real>
-												<real>0.0</real>
-											</array>
-											<array>
-												<real>32</real>
-												<real>32</real>
-											</array>
-											<array>
-												<real>0.0</real>
-												<real>32</real>
-											</array>
-											<array>
-												<real>0.0</real>
-												<real>0.0</real>
-											</array>
-										</array>
-									</array>
+									<array/>
 								</dict>
 								<key>properties</key>
 								<array>
@@ -1079,8 +1048,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>282.1622314453125</real>
-											<real>287.47354125976562</real>
+											<real>231.04107666015625</real>
+											<real>308.05477905273438</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -1157,7 +1126,7 @@
 									<key>collisionType</key>
 									<string></string>
 									<key>cornerRadius</key>
-									<real>16</real>
+									<real>23.253757476806641</real>
 									<key>density</key>
 									<real>1</real>
 									<key>dynamic</key>
@@ -1193,8 +1162,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>144.06094360351562</real>
-											<real>286.14309692382812</real>
+											<real>167.29783630371094</real>
+											<real>208.46548461914062</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
