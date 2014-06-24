@@ -13,7 +13,7 @@
     CCPhysicsNode *_physicsNode;
     CCNode *_catapultArm;
     CCNode *_levelNode;
-    CCButton _retryButton;
+
 }
 
 // is called when CCB file has completed loading

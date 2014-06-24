@@ -9,5 +9,5 @@
 #import "CCNode.h"
 
 @interface Gamplay : CCNode
-
+    CCButton _retryButton;
 @end
