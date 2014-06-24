@@ -14,6 +14,7 @@
     CCNode *_catapultArm;
     CCNode *_levelNode;
     CCButton * _retryButton;
+    CCNode * _contentNode;
 }
 
 // is called when CCB file has completed loading
@@ -47,7 +48,7 @@
     // ensure followed object is in visible are when starting
     self.position = ccp(0, 0);
     CCActionFollow *follow = [CCActionFollow actionWithTarget:penguin worldBoundary:self.boundingBox];
-    [self runAction:follow];
+    [_contentNode runAction:follow];
 }
 
 - (void)retry {
