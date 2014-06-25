@@ -7,6 +7,7 @@
 //
 
 #import "Gamplay.h"
+#import "Penguin.h"
 static const float MIN_SPEED = 5.f;
 
 @implementation Gamplay
@@ -19,7 +20,7 @@ static const float MIN_SPEED = 5.f;
     CCNode * _pullbackNode;
     CCNode *_mouseJointNode;
     CCPhysicsJoint *_mouseJoint;
-    CCNode *_currentPenguin;
+    Penguin *_currentPenguin;
     CCPhysicsJoint *_penguinCatapultJoint;
     CCAction *_followPenguin;
 }
@@ -40,7 +41,7 @@ static const float MIN_SPEED = 5.f;
 - (void)launchPenguin {
     
     // loads the Penguin.ccb we have set up in Spritebuilder
-    _currentPenguin = [CCBReader load:@"Penguin"];
+    _currentPenguin =(Penguin*)[CCBReader load:@"Penguin"];
     // position the penguin at the bowl of the catapult
     _currentPenguin.position = ccpAdd(_catapultArm.position, ccp(50,100));
     
@@ -91,6 +92,7 @@ static const float MIN_SPEED = 5.f;
     if (_mouseJoint != nil)
     {
         // releases the joint and lets the catapult snap back
+        _currentPenguin.launched = TRUE;
         [self launchPenguin];
         [_mouseJoint invalidate];
         _mouseJoint = nil;
@@ -116,25 +118,28 @@ static const float MIN_SPEED = 5.f;
 
 - (void)update:(CCTime)delta
 {
-    // if speed is below minimum speed, assume this attempt is over
-    if (ccpLength(_currentPenguin.physicsBody.velocity) < MIN_SPEED){
-        [self nextAttempt];
-        return;
-    }
-    
-    int xMin = _currentPenguin.boundingBox.origin.x;
-    
-    if (xMin < self.boundingBox.origin.x) {
-        [self nextAttempt];
-        return;
-    }
-    
-    int xMax = xMin + _currentPenguin.boundingBox.size.width;
-    
-    if (xMax > (self.boundingBox.origin.x + self.boundingBox.size.width)) {
-        [self nextAttempt];
-        return;
-    }
+     if (_currentPenguin.launched) {
+         
+        // if speed is below minimum speed, assume this attempt is over
+        if (ccpLength(_currentPenguin.physicsBody.velocity) < MIN_SPEED){
+            [self nextAttempt];
+            return;
+        }
+        
+        int xMin = _currentPenguin.boundingBox.origin.x;
+        
+        if (xMin < self.boundingBox.origin.x) {
+            [self nextAttempt];
+            return;
+        }
+        
+        int xMax = xMin + _currentPenguin.boundingBox.size.width;
+        
+        if (xMax > (self.boundingBox.origin.x + self.boundingBox.size.width)) {
+            [self nextAttempt];
+            return;
+        }
+     }
 }
 
 - (void)nextAttempt {
@@ -142,7 +147,7 @@ static const float MIN_SPEED = 5.f;
     [_contentNode stopAction:_followPenguin];
     _followPenguin=nil;
     
-    CCActionMoveTo *actionMoveTo = [CCActionMoveTo actionWithDuration:2.0f position:ccp(0.5, 0.5)];
+    CCActionMoveTo *actionMoveTo = [CCActionMoveTo actionWithDuration:2.0f position:ccp(0, 0)];
     [_contentNode runAction:actionMoveTo];
 }
 
