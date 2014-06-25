@@ -54,7 +54,7 @@ static const float MIN_SPEED = 5.f;
     
     // ensure followed object is in visible are when starting
     self.position = ccp(0, 0);
-    _followPenguin = [CCActionFollow actionWithTarget:penguin worldBoundary:self.boundingBox];
+    _followPenguin = [CCActionFollow actionWithTarget:_currentPenguin worldBoundary:self.boundingBox];
     [_contentNode runAction:_followPenguin];
 }
 
