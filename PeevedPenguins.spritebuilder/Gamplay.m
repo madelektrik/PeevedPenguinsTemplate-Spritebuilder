@@ -142,8 +142,8 @@ static const float MIN_SPEED = 5.f;
     [_contentNode stopAction:_followPenguin];
     _followPenguin=nil;
     
-    CCActionMoveTo *actionMoveTo = [CCActionMoveTo actionWithDuration:1.f position:ccp(0, 0)];
-//    [_contentNode runAction:actionMoveTo];
+    CCActionMoveTo *actionMoveTo = [CCActionMoveTo actionWithDuration:2.0f position:ccp(0, 0)];
+    [_contentNode runAction:actionMoveTo];
 }
 
 @end
