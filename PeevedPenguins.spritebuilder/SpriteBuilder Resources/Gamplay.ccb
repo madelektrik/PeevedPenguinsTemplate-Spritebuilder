@@ -1014,7 +1014,7 @@
 									<key>collisionType</key>
 									<string></string>
 									<key>cornerRadius</key>
-									<real>10</real>
+									<real>0.0</real>
 									<key>density</key>
 									<real>1</real>
 									<key>dynamic</key>
@@ -1050,8 +1050,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>245.04107666015625</real>
-											<real>305.10000610351562</real>
+											<real>233</real>
+											<real>285</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
