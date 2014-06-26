@@ -44,7 +44,7 @@ static const float MIN_SPEED = 5.f;
     _currentPenguin =(Penguin*)[CCBReader load:@"Penguin"];
     // position the penguin at the bowl of the catapult
     _currentPenguin.position = ccpAdd(_catapultArm.position, ccp(50,100));
-    _currentPenguin.physicsBody.force = ccp(-10000,-10000);
+    _currentPenguin.physicsBody.force = ccp(-10000,-100);
     // add the penguin to the physicsNode of this scene (because it has physics enabled)
     [_physicsNode addChild:_currentPenguin];
     
