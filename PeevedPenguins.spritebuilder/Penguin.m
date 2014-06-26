@@ -23,6 +23,6 @@
 {
     [super onEnter];
     
-    self.physicsBody.force = ccp(10,10);
+
 }
 @end
