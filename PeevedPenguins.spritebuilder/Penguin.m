@@ -18,4 +18,11 @@
 //    
 //    return self;
 //}
+
+-(void)onEnter
+{
+    [super onEnter];
+    
+    self.physicsBody.force = ccp(0.5,0.5);
+}
 @end
